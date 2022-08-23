@@ -548,8 +548,8 @@ button {
 .footersocial-link {
     display: inline-flex;
     background: #1b6e6a;
-    padding: 3rem;
-    border-radius: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
     color: #fff;
     font-size: 5rem;
 }
