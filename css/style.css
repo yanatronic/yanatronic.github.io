@@ -356,6 +356,14 @@ button {
     right: -3rem;
     bottom: 0;
 }
+.projectbutton1 {
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    right: 10.5rem;
+    bottom: 0;
+}
 
 .projecticon {
     font-size: 1.25rem;
@@ -369,7 +377,9 @@ button {
 .projectcontent:hover .projectbutton {
     right: 0;
 }
-
+.projectcontent:hover .projectbutton1 {
+    left: 0;
+}
 
 /*DESCUENTO*/
 .discountcontainer {
@@ -869,7 +879,4 @@ button {
     .swiper-pagination {
         margin-top: 2rem;
     }
-
-
-
 }
