@@ -1,875 +1,290 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
-
-/*base*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 3.5rem 0 0 0;
-  font-family: "Comic Sans", monospace;
-  font-size: 0.938rem;
-  background: linear-gradient(90deg, #183da4 0%, #08174a 50%);
-  color: rgb(255, 255, 255);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: #fff;
-  font-weight: 600;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-button,
-input {
-  border: none;
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-  font-family: "Comic Sans", monospace;
-  font-size: 0.938rem;
-}
-
-/*reutilisabes*/
-.section {
-  padding: 4.5rem 0 2rem;
-}
-
-.sectiontitle {
-  font-size: 2.25rem !important;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.container {
-  max-width: 968px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.grid {
-  display: grid;
-}
-
-.main {
-  overflow: hidden;
-}
-
-/*header*/
-
-.header {
-  width: 100%;
-  background: linear-gradient(90deg, #183da4 0%, #08174a 50%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.nav {
-  height: 3.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navL {
-  display: flex;
-  align-items: center;
-  column-gap: 0.5rem;
-  font-weight: 500;
-}
-
-.navL-img {
-  width: 1.25rem;
-}
-
-.navLink,
-.navL,
-.navToggle,
-.navclose {
-  color: #fff;
-}
-
-.navToggle {
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .navM {
-    position: fixed;
-    width: 100%;
-    background: #000c32;
-    top: -150%;
-    left: 0;
-    padding: 3.5rem 0;
-    transition: 0.4s;
-    z-index: 100;
-    border-radius: 0 0 1.5rem 1.5rem;
-  }
-}
-
-.navclose {
-  font-size: 1.8rem;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.7rem;
-  cursor: pointer;
-}
-
-.navList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.5rem;
-}
-
-.navLink {
-  text-transform: uppercase;
-  font-weight: 900;
-  transition: 0.4s;
-}
-
-.navLink:hover {
-  color: #fff;
-}
-
-/* Show menu */
-.show-menu {
-  top: 0;
-}
-
-/* Change background header */
-.scroll-header {
-  background: #000c32;
-}
-
-/* Active link */
-.active-link {
-  position: relative;
-}
-
-.active-link::before {
-  content: "";
-  position: absolute;
-  bottom: -0.75rem;
-  left: 45%;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-/*HOME*/
-.homecont {
-  row-gap: 1rem;
-}
-
-.homegroup {
-  display: grid;
-  position: relative;
-  padding-top: 2rem;
-}
-
-.homeimg {
-  height: 250px;
-  width: 100%;
-  justify-self: center;
-}
-
-.hometitle {
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 109%;
-  margin-bottom: 1rem;
-}
-
-.homedes {
-  margin-bottom: 1rem;
-}
-
-.homebut {
-  display: flex;
-}
-
-.homebut a {
-  margin-left: 10px;
-}
-
-.swiper-pagination {
-  position: initial;
-  margin-top: 1rem;
-}
-
-.swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  opacity: 1;
-}
-
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  margin: 0 0.5rem;
-}
-
-.swiper-pagination-bullet-active {
-  width: 1.5rem;
-  height: 5px;
-  border-radius: 0.5rem;
-}
-
-/*BUTTONS*/
-.button {
-    display: inline-block;
-    background-color: #143945;
-    color: #fff;
-    padding: 1rem 1.75rem;
-    border-radius: .5rem;
-    font-weight: 500;
-    transition: .3s;
-}
-
-.button:hover {
-    background-color: #f9f9f9;
-}
-
-
-.buttonicon {
-    font-size: 1.25rem;
-}
-
-
-/*CATEGORIA*/
-.categorycontainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 2rem;
-}
-
-.categorydata {
-    text-align: center;
-}
-
-.categoryimg {
-    width: 120px;
-    margin-bottom: .75rem;
-    transition: 3s;
-}
-
-.categorytitle {
-    margin-bottom: .25rem;
-}
-
-
-.categorydata:hover .categoryimg {
-    transform: translateY(-.5rem);
-}
-
-
-/*ABOUT*/
-.aboutcontainer {
-    row-gap: 2rem;
-}
-
-.aboutdata {
-    text-align: center;
-}
-
-.aboutdescription{
-    margin-bottom: 2rem;
-}
-.aboutimg {
-    width: 200px;
-    justify-self: center;
-}
-
-/*PRODUCT*/
-
-.projectcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding-top: 1rem;
-
-
-}
-
-.projectcontent{
-    position: relative;
-    background: #000c32;
-    border-radius: 1rem;
-    padding: 1.5rem 0 1rem 0;
-    text-align: center;
-    overflow: hidden;
-}
-
-.projectimg {
-    width: 90px;
-    transition: .3s;
-}
-
-.projectsubtitle,
-.projectprice {
-    display: block;
-}
-
-.projectsubtitle {
-    font-size: .75rem;
-    margin-bottom: .5rem;
-}
-
-.projecttitle,
-.projectprice {
-    color: #fff;
-    font-weight: 500;
-    font-size: .938rem;
-}
-
-
-.projectbutton {
-    display: inline-flex;
-    padding: .5rem;
-    border-radius: .25rem .25rem .75rem .25rem;
-    position: absolute;
-    right: -3rem;
-    bottom: 0;
-}
-
-.projecticon {
-    font-size: 1.25rem;
-    color: #fff;
-}
-
-.projectcontent:hover .projectimg {
-    transform: translateY(-.5rem);
-}
-
-.projectcontent:hover .projectbutton {
-    right: 0;
-}
-
-
-/*DESCUENTO*/
-.discountcontainer {
-    background: #000c32;
-    border-radius: 1rem;
-    padding: 2.5rem 0 1.5rem;
-    row-gap: .75rem;
-}
-.discountdata {
-    text-align: center;
-
-}
-
-.discounttitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-.discountimg {
-    width: 200px;
-    justify-self: center;
-}
-
-/*NEW*/
-.newcontainer {
-    padding-top: 1rem;
-}
-
-.newimg {
-    width: 120px;
-    margin-bottom: .5rem;
-    transition: .3s;
-}
-
-.newcontent {
-    position: relative;
-    background: #000c32;
-    width: 242px;
-    padding: 2rem 0 1.5rem 0;
-    border-radius: .75rem;
-    text-align: center;
-    overflow: hidden;
-}
-
-.newtag {
-    position: absolute;
-    top: 8%;
-    left: 8%;
-    background-color: #3678ff;
-    color: #fff;
-    font-size: .813rem;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-}
-
-.newtitle {
-    font-size: .938rem;
-    font-weight: 500;
-}
-
-.newsubtitle {
-    display: block;
-    font-size: .813rem;
-    margin-bottom: .5rem;
-}
-
-.newprices {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: .5rem;
-}
-
-.newprice {
-    font-weight: 500;
-    color: #fff;
-}
-
-.newdiscount {
-    color: #3678ff;
-    font-size: .75rem;
-    text-decoration: line-through;
-    font-weight: 500;
-}
-
-.newbutton {
-    display: inline-flex;
-    padding: .5rem;
-    border-radius: .25rem .25rem .75rem .25rem;
-    position: absolute;
-    bottom: 0;
-    right: -3rem;
-}
-
-.newicon {
-    font-size: 1.25rem;
-}
-
-.newcontent:hover .newimg {
-    transform: translateY(-.5rem);
-}
-
-.newcontent:hover .newbutton {
-    right: 0;
-}
-
-
-/*NOTICIAS*/
-.newsld {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.newslf {
-    background: #3678ff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    border-radius: .75rem;
-}
-
-
-.newslin {
-    width: 70%;
-    padding: 0 .5rem;
-    background: none;
-    color: #fff;
-}
-
-.button2 {
-    display: inline-block;
-    background: #0557fc;
-    color: #fff;
-    padding: 1rem 1.75rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition: .3s;
-}
-
-.newslin::placeholder {
-    color: #fff;
-}
-
-/*FOOTER*/
-
-.footer {
-    position: relative;
-    overflow: hidden;
-}
-
-.footercontainer {
-    row-gap: 2rem;
-}
-
-.footerL {
-    display: flex;
-    align-items: center;
-    column-gap: .5rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: #fff;
-}
-
-.footerL-img {
-    width: 50px;
-}
-
-.footerdescription {
-    margin-bottom: 0.2rem;
-}
-
-.footersocial {
-    display: flex;
-    column-gap: 0.2rem;
-}
-
-.footersocial-link {
-    display: inline-flex;
-    background: #1b6e6a;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: #fff;
-    font-size: 10rem;
-}
-
-.footersocial-link:hover {
-    background: #9fd711;
-}
-
-.footertitle {
-    font-size: rem;
-    margin-bottom: 1rem;
-}
-
-.footerlinks {
-    display: grid;
-    row-gap: .35rem;
-}
-
-.footerlink {
-    font-size: .813rem;
-    color: #fff;
-    transition: .3s;
-}
-
-.footerlink:hover {
-    color: #fff;
-}
-
-.footercopy {
-    display: block;
-    text-align: center;
-    font-size: .75rem;
-    margin-top: 4.5rem;
-}
-
-/*scroll up */
-.scrollup{
-  position: fixed;
-  background: #000C32;
-  right: 1rem;
-  bottom: -20%;
-  display: inline-flex;
-  padding: .3rem;
-  border-radius: .25rem;
-  z-index:10;
-  opacity: .8;
-  transition: .4s;
-}
-
-.scrollupicon{
-  font-size: 1.25rem;
-  color: #fff;
-}
-
-.scrollup:hover{
-  background: #000C32;
-  opacity: 1;
-}
-
-/* Show Scroll Up*/
-.show-scroll{
-  bottom: 3rem;
-}
-
-/*scroll bar*/
-::-webkit-scrollbar {
-    width: 0.6rem;
-    background: #413e3e;
-}
-::-webkit-scrollbar-thumb {
-    background: #272525;
-    border-radius: .5rem;
-}
-
-/*RESPONSIVE */
-
-
-@media (max-width: 520px) {
-    .container {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .homeimg {
-        height: 200px;
-    }
-    .homebut {
-        flex-direction: column;
-        width: max-content;
-        row-gap: 1rem;
-    }
-    .categorycontainer, 
-    .projectcontainer {
-        grid-template-columns: .8fr;
-        justify-content: center;
-    }
-    
-}
-
-
-@media (min-width: 576px) {
-    .aboutcontainer {
-        grid-template-columns: .8fr;
-        justify-content: center;
-    }
-
-    .newslc{
-        display: grid;
-        grid-template-columns: .7fr;
-        justify-content: center;
-    }
-    .newsld {
-        padding: 0 3rem;
-    }
-
-}
-
-@media (min-width: 767px) {
-    body {
-        margin: 0;
-    }
-    .section {
-        padding: 7rem 0 2rem;
-    }
-    .nav {
-        height: calc(3.5rem + 1.5rem);
-    }
-    .navclose, 
-    .navToggle {
-        display: none;
-    }
-    .navList {
-        flex-direction: row;
-        column-gap: 3rem;
-    }
-    .navLink {
-        text-transform: initial;
-        font-weight: initial;
-    }
-    .homecont {
-        padding: 8rem 0 2rem;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4rem;
-    }
-    .homeimg {
-        height: 300px;
-    }
-
-    .swiper-pagination {
-        margin-top: 2rem;
-    }
-
-    .categorycontainer {
-        grid-template-columns: repeat(3, 200px);
-        justify-content: center;
-    }
-    .aboutcontainer {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-    .abouttitle,
-    .aboutdata {
-        text-align: initial;
-
-    }
-    .aboutimg {
-        width: 250px;
-    }
-    .projectcontainer {
-        grid-template-columns: repeat(3,200px);
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .discountcontainer {
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        align-items: center;
-        column-gap: 3rem;
-        padding: 3rem 0;
-        border-radius: 3rem;
-    }
-
-    .discountimg {
-        width: 350px;
-        order: -1;
-    }
-
-    .discountdata {
-        padding-right: 6rem;
-    }
-
-    .newslc {
-        grid-template-columns: .5fr;
-    }
-
-    .footercontainer {
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        column-gap: 1rem;
-    }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/LOGOPNG.png" type="imgage/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>YANATRONIC</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+
+    <header class="header" id="header">
+        <nav class="nav container">
+
+            <a href="" class="navL">
+                <img src="img/LOGOPNG.png" alt="YANATRONIC" class="navL-img">
+                YANATRONIC
+            </a>
+
+            <!--LISTA-->
+            <div class="navM" id="nav-menu">
+                <ul class="navList">
+                  <li class="navItem">
+                    <a href="#home" class="navLink active-link"> Inicio </a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#project" class="navLink"> Proyectos </a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#new" class="navLink"> Programas </a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#about" class="navLink"> Nosotros </a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#contacto" class="navLink"> Contactanos </a>
+                  </li>
+
+                </ul>
+      
+                <div class="navclose" id="nav-close">
+                  <i class="bx bx-x"></i>
+                </div>
+              </div>
+            <div class="navToggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <!--Home-->
+        <section class="home container" id="home">
+
+            <div class="swiper home-swiper">
+
+                <div class="swiper-wrapper">
+
+                    <section>
+
+                        <div class="homecont grid">
+
+                            <div class="homedata">
+                                <h1 class="hometitle">
+                                    YANATRONIC
+                                </h1>
+                                <h3 class="descrip">
+                                    Emprendimiento en electrónica e impresión 3D pone a su disposición:
+                                    <br>
+                                    <br> - Diseño y fabricación de placas electrónicas.<br>
+                                    <br> - Fabricación de proyectos eléctricos y  electrónicos.<br>
+                                    <br> - Diseño e Impresión 3D <br>
+                                    <br> - Curso de diseño de placas electrónicas en Proteus.<br>
+                                    <br> - Cursos de modelados en pienzas 3D en Fusion 360. <br>
+                                </h3>
+                            </div>
+                            <div class="homegroup">
+                                <img src="img/a.jpg" alt="" class="homeimg">
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+        <!--PROYECTOS-->
+        <section class="section project" id="project">
+            <h2 class="sectiontitle">PROYECTOS</h2>
+
+            <div class="projectcontainer container grid">
+                <div class="projectcontent">
+                    <img src="img/productos1.png" alt="" class="projectimg" />
+                    <h3 class="projecttitle">PULSO CARDIACO</h3>
+                    <span class="projectsubtitle">Lorem</span>
+                    <button class="button projectbutton">
+                        <i class="bx bxs-invader"></i>
+                    </button>
+                </div>
+                <div class="projectcontent">
+                    <img src="img/productos1.png" alt="" class="projectimg" />
+                    <h3 class="projecttitle">SENSOR PROXIMIDAD</h3>
+                    <span class="projectsubtitle">Lorem</span>
+                    <button class="button projectbutton">
+                        <i class="bx bxs-invader"></i>
+                    </button>
+                </div>
+                <div class="projectcontent">
+                    <img src="img/productos1.png" alt="" class="projectimg" />
+                    <h3 class="projecttitle">CAMBIAR NOMBRE BT</h3>
+                    <span class="projectsubtitle">Lorem</span>
+                    <button class="button projectbutton">
+                        <i class="bx bxs-invader"></i>
+                    </button>
+                </div>
+                <div class="projectcontent">
+                    <img src="img/productos1.png" alt="" class="projectimg" />
+                    <h3 class="projecttitle">SENSOR TEMPERATURA</h3>
+                    <span class="projectsubtitle">Lorem</span>
+                    <button class="button projectbutton">
+                        <i class="bx bxs-invader"></i>
+                    </button>
+                </div>
+                <div class="projectcontent">
+                    <img src="img/productos1.png" alt="" class="projectimg" />
+                    <h3 class="projecttitle">ENCENDER CON APLAUSO</h3>
+                    <span class="projectsubtitle">Lorem</span>
+                    <button class="button projectbutton">
+                        <i class="bx bxs-invader"></i>
+                    </button>
+                </div>
+        </section>
+
+        <!--PROGRAMAS-->
+        <section class="section new" id="new">
+            <h2 class="sectiontitle">PROGRAMAS</h2>
+
+            <div class="newcontainer container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="newcontent swiper-slide">
+                            <div class="newtag">Free</div>
+                            <img src="img/proteus.png" alt="" class="newimg" />
+                            <h3 class="newtitle">PROTEUS</h3>
+                            <span class="newsubtitle">Diseño electrónico</span>
+                            <div class="newprices">
+                                <button class="button newbutton">
+                                    <i class="bx bx-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="newcontent swiper-slide">
+                            <img src="img/arduino.png" alt="" class="newimg" />
+                            <h3 class="newtitle">ARDUINO</h3>
+                            <span class="newsubtitle">Desarrolador de Código</span>
+                            <div class="newprices">
+                                <button class="button newbutton">
+                                    <i class="bx bx-download"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="newcontent swiper-slide">
+                            <img src="img/thinker.png" alt="" class="newimg" />
+                            <h3 class="newtitle">THINKERCAD</h3>
+                            <span class="newsubtitle">Diseño y modelado 3D</span>
+                            <div class="newprices">
+                                <button class="button newbutton">
+                                    <i class="bx bx-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!--DESCUENTO>
+                <section class="section discount">
+                    <div class="discountcontainer container grid">
+                        <div class="discountdata">
+                            <h1 class="discounttitle">COLLAR PARA MASCOTAS</h1> <br />Por la compra de cada medalla personalizada <br> para tu amiguito de cuatro patas <br> <h1>DONAREMOS $1</h1> a una fundación de rescate animal <br>
+                            <a href="#" class="button">Aqui</a>
+                        </div>
+                        <img src="img/dog (2).png" alt="" class="discountimg" />
+                    </div>
+                </section-->
+
+            <!--Sobre nosotros-->
+        </section>
+        <section class="section about" id="about">
+            <div class="aboutcontainer container grid">
+
+                <img src="img/LOGOPNG.png" alt="" class="aboutimg">
+                <div class="aboutdata">
+                    <h2 class="sectiontitle abouttitle">NOSOTROS <br> SOMOS</h2>
+                    <h3 class="aboutdescription"> 
+                        Yanatronic nace como un emprendimiento con el obejetivo de demostrar que 
+                        <br> "La electrónica del exterior, se puede realizar en Ecuador".
+                    </h3>
+                 <!--a href="#" class="button">rgdfgdfgdfgdf</a-->
+                </div>
+            </div>
+        </section>
+
+
+        <!--CORREO-->
+        <!--section class="section newsletter">
+            <div class="newslc container">
+                <h2 class="sectiontitle">Noticias</h2>
+                <p class="newsld">Lorem, ipsum dolor sit amet</p>
+                <form action="" class="newslf">
+                    <input type="text" placeholder="Correo" class="newslin" />
+                    <button class="button2">Subscribete</button>
+                </form>
+            </div>
+        </section>
+    </main-->
+
+    <!--FOOTER-->
+    <footer class="footer section" id="contacto">
+        <h2 class="sectiontitle">CONTACTANOS</h2>
+        <div class="footercontent">
 
     
-}
+        
+            <div class="swiper new-swiper">
+                <div class="swiper-wrapper">
+                    <div class="newcontent swiper-slide">
+                        <a href="#" target="_blank" class="footersocial-link">
+                            <i class="bx bxl-whatsapp"></i>
+                        </a>
+                    </div>
 
-@media (min-width: 992px) {
+                    <div class="newcontent swiper-slide">
+                        <a href="#" target="_blank" class="footersocial-link">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="newcontent swiper-slide">
+                        <a href="#" target="_blank" class="footersocial-link">
+                            <i class="bx bxl-instagram-alt"></i>
+                        </a>
+                    </div>
+                    <div class="newcontent swiper-slide">
+                        <a href="#" target="_blank" class="footersocial-link">
+                            <i class="bx bxl-tiktok"></i>
+                        </a>
+                    </div>
+                    <div class="newcontent swiper-slide">
+                        <a href="#" target="_blank" class="footersocial-link">
+                            <i class="bx bxl-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        <span class="footercopy">@yanatronic</span>
+    </footer>
 
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    <!--FOOTER-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollupicon"></i>
+    </a>
 
-    .sectiontitle {
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
-    }
+    <!--JAVASCRIPT-->
+    <script src="js/scrollreveal.min.js"></script>
 
-    .homecont {
-        padding-top: 9rem;
-        gap: 3rem;
-    }
-    .homegroup {
-        padding-top: 0;
-    }
-    .homeimg {
-        height: 400px;
-        transform: translateY(-3rem);
-    }
-    .homeindicator {
-        top: initial;
-        right: initial;
-        bottom: 15%;
-        left: 45%;
-    }
-    .homeindicator::after {
-        top: 0;
-        height: 75px;
-    }
+    <script src="js/swiper-bundle.min.js"></script>
 
-    .homedetails-img {
-        bottom: 0;
-        right: 58%;
-
-    }
-
-    .hometitle {
-        margin-bottom: 1.5rem;
-    }
-    .homedes {
-        margin-bottom: 2.5rem;
-        padding-right: 2rem;
-    }
-    .categorycontainer {
-        column-gap: 8rem;
-    }
-
-    .categoryimg {
-        width: 200px;
-    }
-    .aboutcontainer {
-        column-gap: 7rem;
-    }
-    .aboutimg {
-        width: 350px;
-    }
-    .aboutdescription {
-        padding-right: 2rem;
-    }
-    .projectcontainer {
-        gap: 3.5rem;
-    }
-    .projectcontent {
-        border-radius: 1.5rem;
-    }
-    .projectimg {
-        width: 110px;
-
-    }
-
-    .projecttitle {
-        font-size: 1rem;
-    }
-    .discountcontainer {
-        column-gap: 7rem;
-    }
-
-    .newcontent {
-        width: 310px;
-        border-radius: 1rem;
-        padding: 2rem 0;
-    }
-
-    .newimg {
-        width: 150px;
-    }
-    .newimg,
-    .newsubtitle {
-        margin-bottom: 1rem;
-    }
-
-    .newtitle {
-        font-size: 1rem;
-    }
-
-    .footercopy {
-        margin-top: 6rem;
-    }
-
-}
-
-@media (min-width: 1200px) {
-
-    .homeimg {
-        height: 420px;   
-    }
-
-    .swiper-pagination {
-        margin-top: 2.5rem;
-    }
+    <script src="js/main.js"></script>
 
 
+</body>
 
-}
+</html>
